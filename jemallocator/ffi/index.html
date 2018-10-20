@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="API documentation for the Rust `ffi` mod in crate `jemallocator`."><meta name="keywords" content="rust, rustlang, rust-lang, ffi"><title>jemallocator::ffi - Rust</title><link rel="stylesheet" type="text/css" href="../../normalize.css"><link rel="stylesheet" type="text/css" href="../../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" type="text/css" href="../../dark.css"><link rel="stylesheet" type="text/css" href="../../light.css" id="themeStyle"><script src="../../storage.js"></script></head><body class="rustdoc mod"><!--[if lte IE 8]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="sidebar"><div class="sidebar-menu">&#9776;</div><p class='location'>Module ffi</p><div class="sidebar-elems"><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#constants">Constants</a></li><li><a href="#statics">Statics</a></li><li><a href="#functions">Functions</a></li><li><a href="#types">Type Definitions</a></li></ul></div><p class='location'><a href='../index.html'>jemallocator</a></p><script>window.sidebarCurrent = {name: 'ffi', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script></div></nav><div class="theme-picker"><button id="theme-picker" aria-label="Pick another theme!"><img src="../../brush.svg" width="18" alt="Pick another theme!"></button><div id="theme-choices"></div></div><script src="../../theme.js"></script><nav class="sub"><form class="search-form js-only"><div class="search-container"><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><a id="settings-menu" href="../../settings.html"><img src="../../wheel.svg" width="18" alt="Change settings"></a></div></form></nav><section id="main" class="content"><h1 class='fqn'><span class='out-of-band'><span id='render-detail'><a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class='inner'>&#x2212;</span>]</a></span><a class='srclink' href='../../src/jemallocator/lib.rs.html#249-251' title='goto source code'>[src]</a></span><span class='in-band'>Module <a href='../index.html'>jemallocator</a>::<wbr><a class="mod" href=''>ffi</a></span></h1><div class='docblock'><p>Raw bindings to jemalloc</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.extent_hooks_s.html"
+                                  title='struct jemallocator::ffi::extent_hooks_s'>extent_hooks_s</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent lifetime management functions.</p>
+
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="constant" href="constant.MALLOCX_ZERO.html"
+                                  title='constant jemallocator::ffi::MALLOCX_ZERO'>MALLOCX_ZERO</a></td>
+                           <td class='docblock-short'>
+                                <p>Initialize newly allocated memory to contain zero bytes.</p>
+
+                           </td>
+                       </tr></table><h2 id='statics' class='section-header'><a href="#statics">Statics</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="static" href="static.malloc_message.html"
+                                  title='static jemallocator::ffi::malloc_message'>malloc_message</a></td>
+                           <td class='docblock-short'>
+                                <p>Allows overriding the function which emits the text strings forming the
+errors and warnings if for some reason the <code>STDERR_FILENO</code> file descriptor
+is not suitable for this.</p>
+
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MALLOCX_ALIGN.html"
+                                  title='fn jemallocator::ffi::MALLOCX_ALIGN'>MALLOCX_ALIGN</a></td>
+                           <td class='docblock-short'>
+                                <p>Align the memory allocation to start at an address that is a multiple of <code>align</code>,
+where a is a power of two.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MALLOCX_ARENA.html"
+                                  title='fn jemallocator::ffi::MALLOCX_ARENA'>MALLOCX_ARENA</a></td>
+                           <td class='docblock-short'>
+                                <p>Use the arena specified by the index <code>a</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MALLOCX_LG_ALIGN.html"
+                                  title='fn jemallocator::ffi::MALLOCX_LG_ALIGN'>MALLOCX_LG_ALIGN</a></td>
+                           <td class='docblock-short'>
+                                <p>Align the memory allocation to start at an address that is a
+multiple of <code>1 &lt;&lt; la</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MALLOCX_TCACHE.html"
+                                  title='fn jemallocator::ffi::MALLOCX_TCACHE'>MALLOCX_TCACHE</a></td>
+                           <td class='docblock-short'>
+                                <p>Use the thread-specific cache (<em>tcache</em>) specified by the identifier <code>tc</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.MALLOCX_TCACHE_NONE.html"
+                                  title='fn jemallocator::ffi::MALLOCX_TCACHE_NONE'>MALLOCX_TCACHE_NONE</a></td>
+                           <td class='docblock-short'>
+                                <p>Do not use a thread-specific cache (<em>tcache</em>).</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.aligned_alloc.html"
+                                  title='fn jemallocator::ffi::aligned_alloc'>aligned_alloc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocates <code>size</code> bytes of memory at an address which is a multiple of
+<code>alignment</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.calloc.html"
+                                  title='fn jemallocator::ffi::calloc'>calloc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocates zero-initialized space for an array of <code>number</code> objects, each
+of whose size is <code>size</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.dallocx.html"
+                                  title='fn jemallocator::ffi::dallocx'>dallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Deallocates previously-allocated memory region referenced by <code>ptr</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.free.html"
+                                  title='fn jemallocator::ffi::free'>free</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Deallocates previously-allocated memory region referenced by <code>ptr</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.mallctl.html"
+                                  title='fn jemallocator::ffi::mallctl'>mallctl</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>General interface for introspecting the memory allocator, as well as
+setting modifiable parameters and triggering actions.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.mallctlbymib.html"
+                                  title='fn jemallocator::ffi::mallctlbymib'>mallctlbymib</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Like <a href="../../jemallocator/ffi/fn.mallctl.html" title="`mallctl`"><code>mallctl</code></a> but taking a <code>mib</code> as input instead of a name.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.mallctlnametomib.html"
+                                  title='fn jemallocator::ffi::mallctlnametomib'>mallctlnametomib</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Translates a name to a “Management Information Base” (MIB) that can be
+passed repeatedly to <a href="../../jemallocator/ffi/fn.mallctlbymib.html" title="`mallctlbymib`"><code>mallctlbymib</code></a>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.malloc.html"
+                                  title='fn jemallocator::ffi::malloc'>malloc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocates <code>size</code> bytes of uninitialized memory.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.malloc_stats_print.html"
+                                  title='fn jemallocator::ffi::malloc_stats_print'>malloc_stats_print</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Writes summary statistics via the <code>write_cb</code> callback function pointer
+and <code>cbopaque</code> data passed to <code>write_cb</code>, or <a href="../../jemallocator/ffi/static.malloc_message.html" title="`malloc_message`"><code>malloc_message</code></a> if <code>write_cb</code>
+is null.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.malloc_usable_size.html"
+                                  title='fn jemallocator::ffi::malloc_usable_size'>malloc_usable_size</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the real size of the previously-allocated memory region
+referenced by <code>ptr</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.mallocx.html"
+                                  title='fn jemallocator::ffi::mallocx'>mallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocates at least <code>size</code> bytes of memory according to <code>flags</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.nallocx.html"
+                                  title='fn jemallocator::ffi::nallocx'>nallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the real size of the allocation that would result from a
+<a href="../../jemallocator/ffi/fn.mallocx.html" title="`mallocx`"><code>mallocx</code></a> function call with the same arguments.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.posix_memalign.html"
+                                  title='fn jemallocator::ffi::posix_memalign'>posix_memalign</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocates <code>size</code> bytes of memory at an address which is a multiple of
+<code>alignment</code> and is placed in <code>*ptr</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.rallocx.html"
+                                  title='fn jemallocator::ffi::rallocx'>rallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Resizes the previously-allocated memory region referenced by <code>ptr</code> to be
+at least <code>size</code> bytes.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.realloc.html"
+                                  title='fn jemallocator::ffi::realloc'>realloc</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Resizes the previously-allocated memory region referenced by <code>ptr</code> to
+<code>size</code> bytes.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.sallocx.html"
+                                  title='fn jemallocator::ffi::sallocx'>sallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Returns the real size of the previously-allocated memory region
+referenced by <code>ptr</code>.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.sdallocx.html"
+                                  title='fn jemallocator::ffi::sdallocx'>sdallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Deallocates previously-allocated memory region referenced by <code>ptr</code> with
+<code>size</code> hint.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="fn" href="fn.xallocx.html"
+                                  title='fn jemallocator::ffi::xallocx'>xallocx</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Resizes the previously-allocated memory region referenced by <code>ptr</code> <em>in
+place</em> to be at least <code>size</code> bytes, returning the real size of the
+allocation.</p>
+
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_alloc_t.html"
+                                  title='type jemallocator::ffi::extent_alloc_t'>extent_alloc_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent allocation function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_commit_t.html"
+                                  title='type jemallocator::ffi::extent_commit_t'>extent_commit_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent commit function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_dalloc_t.html"
+                                  title='type jemallocator::ffi::extent_dalloc_t'>extent_dalloc_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent deallocation function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_decommit_t.html"
+                                  title='type jemallocator::ffi::extent_decommit_t'>extent_decommit_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent decommit function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_destroy_t.html"
+                                  title='type jemallocator::ffi::extent_destroy_t'>extent_destroy_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent destruction function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_hooks_t.html"
+                                  title='type jemallocator::ffi::extent_hooks_t'>extent_hooks_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent lifetime management functions.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_merge_t.html"
+                                  title='type jemallocator::ffi::extent_merge_t'>extent_merge_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent merge function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_purge_t.html"
+                                  title='type jemallocator::ffi::extent_purge_t'>extent_purge_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent purge function.</p>
+
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="type" href="type.extent_split_t.html"
+                                  title='type jemallocator::ffi::extent_split_t'>extent_split_t</a></td>
+                           <td class='docblock-short'>
+                                <p>Extent split function.</p>
+
+                           </td>
+                       </tr></table></section><section id="search" class="content hidden"></section><section class="footer"></section><aside id="help" class="hidden"><div><h1 class="hidden">Help</h1><div class="shortcuts"><h2>Keyboard Shortcuts</h2><dl><dt><kbd>?</kbd></dt><dd>Show this help dialog</dd><dt><kbd>S</kbd></dt><dd>Focus the search field</dd><dt><kbd>↑</kbd></dt><dd>Move up in search results</dd><dt><kbd>↓</kbd></dt><dd>Move down in search results</dd><dt><kbd>↹</kbd></dt><dd>Switch tab</dd><dt><kbd>&#9166;</kbd></dt><dd>Go to active search result</dd><dt><kbd>+</kbd></dt><dd>Expand all sections</dd><dt><kbd>-</kbd></dt><dd>Collapse all sections</dd></dl></div><div class="infos"><h2>Search Tricks</h2><p>Prefix searches with a type followed by a colon (e.g. <code>fn:</code>) to restrict the search to a given type.</p><p>Accepted types are: <code>fn</code>, <code>mod</code>, <code>struct</code>, <code>enum</code>, <code>trait</code>, <code>type</code>, <code>macro</code>, and <code>const</code>.</p><p>Search functions by type signature (e.g. <code>vec -> usize</code> or <code>* -> vec</code>)</p><p>Search multiple things at once by splitting your query with comma (e.g. <code>str,u8</code> or <code>String,struct:Vec,test</code>)</p></div></div></aside><script>window.rootPath = "../../";window.currentCrate = "jemallocator";</script><script src="../../aliases.js"></script><script src="../../main.js"></script><script defer src="../../search-index.js"></script></body></html>

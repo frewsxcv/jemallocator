@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["mallctl_fetch","Fetch the value of options `name`."],["mallctl_set","Set a value to option `name`."],["usable_size","Return the usable size of the allocation pointed to by ptr."]],"mod":[["ffi","Raw bindings to jemalloc"]],"struct":[["Jemalloc","Handle to the jemalloc allocator"]]});
